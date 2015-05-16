@@ -1,19 +1,24 @@
 package com.ube.salinlahifour;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-public class Lesson implements Parcelable{	
+public class Lesson implements Parcelable{
 	private String name;
+	private String className;
 	private String activity;
-	private String tutorial;
+	private String lexiconDir;
+	private int lessonPreReq;
 	private String description;
 	private int image;
 	private boolean locked;
 	private int lessonNumber;
-	
+	private ArrayList<Item> items;
+	private int tutBackground;
 
 	public Lesson(){}
 	
@@ -22,9 +27,17 @@ public class Lesson implements Parcelable{
 		this.image = image;
 		this.description = description;
 		this.activity = "com.ube.salinlahifour.lessonActivities." + className;
-		this.tutorial = "com.ube.salinlahifour.tutorials." + className;
 		this.lessonNumber = lessonNumber;
+		tutBackground = 0;
 		return this;
+	}
+	
+	public void setTutBackground(int resID){
+		tutBackground = resID;
+	}
+	
+	public int getTutBackground(){
+		return tutBackground;
 	}
 	
 	public String getName() {
@@ -48,15 +61,12 @@ public class Lesson implements Parcelable{
 	}
 
 	public void setActivity(String activity) {
-		this.activity = activity;
+		className = activity;
+		this.activity = "com.ube.salinlahifour.lessonActivities." + activity;
 	}
-
-	public String getTutorial() {
-		return tutorial;
-	}
-
-	public void setTutorial(String tutorial) {
-		this.tutorial = tutorial;
+	
+	public String getTheRealName(){
+		return className;
 	}
 
 	public int getImage() {
@@ -66,7 +76,19 @@ public class Lesson implements Parcelable{
 	public void setImage(int image) {
 		this.image = image;
 	}
-	
+	public String getLexicon(){
+		return this.lexiconDir;
+	}
+	public void setLexicon(String path){
+		lexiconDir = path;
+	}
+	public int getPreReq() {
+		return this.lessonPreReq;
+	}
+
+	public void setPreReq(int lessonNum) {
+		this.lessonPreReq = lessonNum;
+	}
 	public void setLocked(boolean locked){
 		this.locked = locked;
 	}
@@ -82,6 +104,14 @@ public class Lesson implements Parcelable{
 	public void setLessonNumber(int lessonNumber) {
 		this.lessonNumber = lessonNumber;
 	}
+
+	public ArrayList<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(ArrayList<Item> items) {
+		this.items = items;
+	}	
 
 	public Lesson(Parcel in) {
 	    super();
@@ -112,7 +142,6 @@ public class Lesson implements Parcelable{
 //            this.tutorial, this.description, this.image+""});
 		dest.writeString(name);
 		dest.writeString(activity);
-		dest.writeString(tutorial);
 		dest.writeString(description);
 		dest.writeString(image+"");
 		dest.writeString(lessonNumber+"");
@@ -122,7 +151,6 @@ public class Lesson implements Parcelable{
 	public void readFromParcel(Parcel in) {	
 	    this.name = in.readString();
 	    this.activity = in.readString();
-	    this.tutorial = in.readString();
 	    this.description = in.readString();
 	    this.image = Integer.parseInt(in.readString());
 	    this.lessonNumber = Integer.parseInt(in.readString());

@@ -2,7 +2,8 @@
 <RelativeLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:layout_height="match_parent"
+	android:id="@+id/parent_view">
 	
     
     <LinearLayout
@@ -75,6 +76,7 @@
 	    android:orientation="horizontal" >
 	
 	    <RelativeLayout 
+	        android:id="@+id/frame_3"
 	    	android:layout_width="match_parent"
 	    	android:layout_height="match_parent"
 	    	android:layout_margin="10dp"
@@ -147,7 +149,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Tap everybody!"
+        android:text="Tap every animal!"
         android:textColor="#fff71c"
         android:textSize="32dp"
         />
