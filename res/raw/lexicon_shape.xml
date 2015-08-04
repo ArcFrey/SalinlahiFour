@@ -23,7 +23,7 @@
 		<eng_word>Square</eng_word>
 		<w_type>definition</w_type>
 		<notes>It looks like a door too.</notes>
-		<hint>It looks like a long box. It releases a sword. Why does this ship have a sword?</hint>
+		<hint>It has 4 sides. It releases a normal bullet.</hint>
 		<lesson>4</lesson>
 		<image_path>square</image_path>
 		<eng_sound>shape_square</eng_sound>
@@ -106,7 +106,7 @@
 		<question>We need Tunod to that can shoot 3 at the same time</question>
 		<eng_word>Arrow</eng_word>
 		<w_type>definition</w_type>
-		<notes>It’s like a triangle and a rectangle put together.</notes>
+		<notes>It’s like a Tatsulok and a Parihaba put together.</notes>
 		<hint>An arrow. It looks like it's pointing to something.</hint>
 		<lesson>4</lesson>
 		<image_path>arrow</image_path>
@@ -121,7 +121,7 @@
 		<eng_word>Cresent</eng_word>
 		<w_type>definition</w_type>
 		<notes>It looks like the moon sometimes too.</notes>
-		<hint>Looks like a banana or a fingernail./</hint>
+		<hint>Looks like a banana or a fingernail.</hint>
 		<lesson>4</lesson>
 		<image_path>cresent</image_path>
 		<eng_sound>shape_crescent</eng_sound>
@@ -135,7 +135,7 @@
 		<eng_word>Heart</eng_word>
 		<w_type>definition</w_type>
 		<notes>A common shape during Valentines Day</notes>
-		<hint>It's such a LOVELY shape./</hint>
+		<hint>It's such a LOVELY shape.</hint>
 		<lesson>4</lesson>
 		<image_path>heart</image_path>
 		<eng_sound>shape_heart</eng_sound>
